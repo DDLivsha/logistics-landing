@@ -15,8 +15,10 @@ export default function Header() {
    const { open } = useModalStore()
 
    //================= SCROLL FOR NAV ======================
-   const [activeSection, setActiveSection] = useState(null)
-   const sectionRefs = useRef({})
+   const [activeSection, setActiveSection] = useState<string | null>(null)
+
+   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({})
+
    useEffect(() => {
       const options = {
          root: null,
@@ -50,7 +52,7 @@ export default function Header() {
       }
    }, [])
 
-   const handleClick = (id) => {
+   const handleClick = (id: string) => {
       const section = document.getElementById(id)
       if (section) {
          section.scrollIntoView({ behavior: 'smooth' })

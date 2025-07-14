@@ -1,123 +1,90 @@
-'use client'
-import Intro from "@/components/Intro";
-
-import { useState, useEffect, useRef } from 'react'
+import Intro from "@/components/Intro/Intro";
+import Services from "@/components/Services/Services";
+import { services } from "@/helpers/localData";
+import { Service } from "@/interfaces/service";
 
 //====================== SLIDER ======================
 
-const clientsData = [
-  {
-    name: 'John Smith',
-    position: 'FOX Hub CEO',
-    image: '/images/clients/review-photo.jpg',
-    content: [
-      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor...',
-      'Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-    ]
-  },
-  {
-    name: 'John Smith',
-    position: 'FOX Hub CEO',
-    image: '/images/clients/review-photo.jpg',
-    content: [
-      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor...',
-      'Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-    ]
-  },
-]
+// const clientsData = [
+//   {
+//     name: 'John Smith',
+//     position: 'FOX Hub CEO',
+//     image: '/images/clients/review-photo.jpg',
+//     content: [
+//       'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor...',
+//       'Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+//     ]
+//   },
+//   {
+//     name: 'John Smith',
+//     position: 'FOX Hub CEO',
+//     image: '/images/clients/review-photo.jpg',
+//     content: [
+//       'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor...',
+//       'Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+//     ]
+//   },
+// ]
+
 
 export default function Home() {
 
-  //====================== SERVICE DATA ======================
-  const [services, setServices] = useState([
-    {
-      title: "Ground Shipping",
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
-      link: "#"
-    },
-    {
-      title: "Railway Shipping",
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam fokijas;fksjad f;asdj f;sadjf;kals df;asd jfadsj fasld;kjf as;dlkf jasdl;kjf asldk;",
-      link: "#"
-    },
-    {
-      title: "Water Shipping",
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
-      link: "#"
-    },
-    {
-      title: "Air Shipping",
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
-      link: "#"
-    },
-  ])
-
   //====================== TEAM DATA ======================
-  const [team, setTeam] = useState([
-    {
-      name: "John Smith",
-      position: "Logistic manager - 8 years experience",
-      image: "images/team/John-1.jpg",
-      email: 'john@centerlogistic.com',
-      phone: '+987412512543'
-    },
-    {
-      name: "Daniel Kore",
-      position: "Software engineer",
-      image: "images/team/Daniel.jpg",
-      email: 'john@centerlogistic.com',
-      phone: '+987412512543'
-    },
-    {
-      name: "Anna Smith",
-      position: "Logistic manager - 8 years experience",
-      image: "images/team/Anna.jpg",
-      email: 'john@centerlogistic.com',
-      phone: '+987412512543'
-    },
+  // const [team, setTeam] = useState([
+  //   {
+  //     name: "John Smith",
+  //     position: "Logistic manager - 8 years experience",
+  //     image: "images/team/John-1.jpg",
+  //     email: 'john@centerlogistic.com',
+  //     phone: '+987412512543'
+  //   },
+  //   {
+  //     name: "Daniel Kore",
+  //     position: "Software engineer",
+  //     image: "images/team/Daniel.jpg",
+  //     email: 'john@centerlogistic.com',
+  //     phone: '+987412512543'
+  //   },
+  //   {
+  //     name: "Anna Smith",
+  //     position: "Logistic manager - 8 years experience",
+  //     image: "images/team/Anna.jpg",
+  //     email: 'john@centerlogistic.com',
+  //     phone: '+987412512543'
+  //   },
 
-  ])
+  // ])
   //====================== CLIENTS DATA ======================
-  const [clients, setClients] = useState([
-    { img: 'images/logos/atica.svg' },
-    { img: 'images/logos/hex-lab-1.svg' },
-    { img: 'images/logos/amara.svg' },
-    { img: 'images/logos/muzica-2.svg' },
-    { img: 'images/logos/solaytic.svg' },
-    { img: 'images/logos/hexa.svg' },
-    { img: 'images/logos/utosia-2.svg' },
-    { img: 'images/logos/fox-hub.svg' },
-  ])
+  // const [clients, setClients] = useState([
+  //   { img: 'images/logos/atica.svg' },
+  //   { img: 'images/logos/hex-lab-1.svg' },
+  //   { img: 'images/logos/amara.svg' },
+  //   { img: 'images/logos/muzica-2.svg' },
+  //   { img: 'images/logos/solaytic.svg' },
+  //   { img: 'images/logos/hexa.svg' },
+  //   { img: 'images/logos/utosia-2.svg' },
+  //   { img: 'images/logos/fox-hub.svg' },
+  // ])
   //====================== BENEFITS DATA ======================
-  const [benefits, setBenefits] = useState([
-    { title: 'Safety' },
-    { title: 'High quality drivers' },
-    { title: 'Guarantee & Support 24/7' },
-    { title: 'Personal manager' },
-  ])
+  // const [benefits, setBenefits] = useState([
+  //   { title: 'Safety' },
+  //   { title: 'High quality drivers' },
+  //   { title: 'Guarantee & Support 24/7' },
+  //   { title: 'Personal manager' },
+  // ])
 
   return (
     <>
       <main className="main">
         <Intro />
-        {/* <section
+
+        <section
           className="main__service service"
           id="service"
         >
-          <div className="container">
-            <div className="service__inner">
-              {services.map((item, key) => (
-                <div key={key} className="service__content-block">
-                  <h3 className="service__title">{item.title}</h3>
-                  <p className="service__text">{item.text}</p>
-                  <div className="service__link-wrapper w-[100px]">
-                    <a href={item.link} className="service__link">Learn more</a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
+          <Services data={services} />
+        </section>
+
         {/* <section
           className="main__clients clients"
           id="clients"

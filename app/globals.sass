@@ -1,4 +1,13 @@
-@import "tailwindcss"
+@use  "../styles/header.sass"
+@use  "../styles/intro.sass"
+@use  "../styles/service.sass"
+@use  "../styles/clients.sass"
+@use  "../styles/benefits.sass"
+@use  "../styles/team.sass"
+@use  "../styles/mission.sass"
+@use  "../styles/news.sass"
+@use  "../styles/footer.sass"
+@use  "../styles/breakpoints.sass"
 
 :root
    --font-lato: 'Lato', sans-serif
@@ -28,13 +37,10 @@ input
    font-family: var(--font-pt-sans)
    font-size: 18px
    font-weight: bold
-   line-height: normal
    text-align: center
    padding: 11px 45px
    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2)
-   transition: all 0.3s
-   &:hover
-      transform: scale(1.05)
+   cursor: pointer
 
 .title
    color: #2c2c2c
@@ -45,14 +51,3 @@ input
    line-height: normal
    & span
       color: #004af2
-
-@import  "../styles/header.sass"
-@import  "../styles/intro.sass"
-@import  "../styles/service.sass"
-@import  "../styles/clients.sass"
-@import  "../styles/benefits.sass"
-@import  "../styles/team.sass"
-@import  "../styles/mission.sass"
-@import  "../styles/news.sass"
-@import  "../styles/footer.sass"
-@import  "../styles/breakpoints.sass"
