@@ -5,7 +5,7 @@ export default function Footer() {
       <footer className="footer">
          <div className="footer__content">
             <a href="index.html" className="footer__logo">
-               <img src="images/logo-black.svg" alt="CenterLogistic" className="footer__logo-img" />
+               {/* <img src="images/logo-black.svg" alt="CenterLogistic" className="footer__logo-img" /> */}
             </a>
             <h6 className="footer__info">New York, Street, ZIP code</h6>
             <h6 className="footer__info">Call Us: <a href="tel:9948373123" className="footer__info-link">+9948373123</a> or E-mail:

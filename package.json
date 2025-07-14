@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "motion": "^12.23.5",
     "next": "15.3.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sass": "^1.89.2"
+    "react-hook-form": "^7.60.0",
+    "sass": "^1.89.2",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

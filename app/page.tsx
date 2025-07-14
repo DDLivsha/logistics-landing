@@ -1,7 +1,5 @@
 'use client'
-import Header from "@/components/Header";
 import Intro from "@/components/Intro";
-import Footer from "@/components/Footer";
 import { useState, useEffect, useRef } from 'react'
 
 //====================== SLIDER ======================
@@ -99,7 +97,6 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       <main className="main">
         <Intro />
         <section
@@ -293,7 +290,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.sass";
 import { Lato, PT_Sans } from 'next/font/google'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Logistic landing",
@@ -27,9 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  className={`${lato.variable} ${ptSans.variable}`}>
+    <html lang="en" className={`${lato.variable} ${ptSans.variable}`}>
       <body>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
