@@ -1,5 +1,6 @@
 'use client'
 import Intro from "@/components/Intro";
+
 import { useState, useEffect, useRef } from 'react'
 
 //====================== SLIDER ======================
@@ -99,7 +100,7 @@ export default function Home() {
     <>
       <main className="main">
         <Intro />
-        <section
+        {/* <section
           className="main__service service"
           id="service"
         >
@@ -116,8 +117,8 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
-        <section
+        </section> */}
+        {/* <section
           className="main__clients clients"
           id="clients"
         >
@@ -135,7 +136,7 @@ export default function Home() {
               </ul>
 
               <div className="clients__slider">
-                {/* <Swiper
+                <Swiper
                   modules={[Navigation, Pagination, Autoplay]}
                   // navigation
                   pagination={{ clickable: true }}
@@ -171,7 +172,7 @@ export default function Home() {
                       </div>
                     </SwiperSlide>
                   ))}
-                </Swiper> */}
+                </Swiper>
               </div>
 
             </div>
@@ -181,9 +182,9 @@ export default function Home() {
               <p className="clients__love">we love our clients</p>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="main__benefits benefits" id="benefits" data-scrollspy="#benefits">
+        {/* <section className="main__benefits benefits" id="benefits" data-scrollspy="#benefits">
           <div className="container">
             <div className="benefits__inner">
               <div className="benefits__content">
@@ -202,9 +203,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="main__team team" id="team" data-scrollspy="#team">
+        {/* <section className="main__team team" id="team" data-scrollspy="#team">
           <div className="container">
             <h2 className="team__title title" data-aos="fade-down"><span>Our</span> Team</h2>
             <div className="team__inner">
@@ -229,9 +230,9 @@ export default function Home() {
               </ul>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="main__mission mission">
+        {/* <section className="main__mission mission">
           <div className="container">
             <div className="mission__content-wrapper">
               <h2 className="mission__title">Our mission</h2>
@@ -249,9 +250,9 @@ export default function Home() {
               <a href="#" target="_blank" className="mission__button button">Become a client</a>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="main__news news" id="news" data-scrollspy="#news">
+        {/* <section className="main__news news" id="news" data-scrollspy="#news">
           <div className="container">
             <h2 className="clients__title title" data-aos="fade-down"><span>Interesting</span> to read</h2>
             <ul className="news__list">
@@ -288,7 +289,7 @@ export default function Home() {
             </ul>
             <a href="news.html" className="news__button button" data-aos="fade-up">Visit blog</a>
           </div>
-        </section>
+        </section> */}
       </main>
     </>
   );
