@@ -1,0 +1,309 @@
+// Breakpoints
+$lg: 991px
+$md: 770px
+$sm: 600px
+$xs: 450px
+
+@media (max-width: $lg)
+   .service__inner
+      flex-wrap: wrap
+
+   .service__content-block
+      width: 50%
+      margin: 0
+      margin-bottom: 20px
+
+   .service__text
+      max-width: 80%
+
+   .clients__inner
+      flex-wrap: wrap
+      justify-content: center
+
+   .clients__logos-list
+      margin-bottom: 50px
+
+   .clients__slide
+      max-width: 80%
+
+   .clients__img
+      max-width: 150px
+
+   .footer
+      background-size: 40% auto
+      background-position: 0 90%, 100% 90%
+
+@media (max-width: $md)
+   .header,
+   .header__inner
+      height: 50px
+
+   .overlay
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: rgba(0, 0, 0, 0.5)
+      visibility: hidden
+      opacity: 0
+      transition: all 0.3s
+
+   .overlay--show
+      visibility: visible
+      opacity: 1
+
+   .header__nav
+      display: block
+      background: #262626
+      height: 100vh
+      width: 320px
+      position: absolute
+      top: 100%
+      right: 0
+      transform: translateX(100%)
+      transition: all 0.3s ease-in
+
+   .header__nav--active
+      transform: translateX(0)
+
+   .header__nav-list
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-end
+      text-align: right
+      padding-top: 9px
+
+   .header__nav-item
+      height: 45px
+      width: 100%
+      text-align: right
+      justify-content: flex-end
+      padding-right: 15px
+
+   .header__nav-link
+      padding: 0
+      text-align: right
+
+   .burger
+      display: block
+      position: relative
+      width: 30px
+      height: 24px
+
+   .burger__line
+      display: block
+      width: 30px
+      height: 2px
+      background-color: #fff
+      margin-bottom: 4px
+
+      &:first-child
+         width: 20px
+         margin-left: auto
+
+   .burger--active,
+   .burger__line:nth-child(1),
+   .burger__line:nth-child(3)
+      display: none
+
+   .burger__line:nth-child(2)
+      position: absolute
+      left: 0
+      top: 50%
+      transform-origin: center
+      transform: rotate(45deg)
+      transition: transform 0.3s
+
+   .burger__line:nth-child(4)
+      position: absolute
+      left: 0
+      top: 50%
+      transform-origin: center
+      transform: rotate(-45deg)
+      transition: transform 0.3s
+
+   .intro__inner
+      flex-direction: column
+      align-items: flex-start
+      padding-bottom: 50px
+
+   .intro__form
+      order: 2
+      position: static
+
+   .intro__text
+      max-width: 100%
+      margin-top: 60px
+      margin-bottom: 30px
+
+   .intro__text-title
+      font-size: 90px
+
+      &::before
+         font-size: 110px
+         right: 233px
+
+   .form__button
+      margin-bottom: 25px
+
+   .clients__logos-list::before
+      display: none
+
+   .benefits__inner
+      flex-direction: column
+
+   .benefits__list
+      margin-bottom: 40px
+
+   .benefits__list-item
+      max-width: none
+
+   .team__content-list
+      flex-wrap: wrap
+      justify-content: center
+
+   .team__content-item
+      margin-right: 0
+
+      &:last-child
+         margin: 0
+
+   .mission__title
+      font-size: 70px
+
+   .news__list
+      flex-wrap: wrap
+
+   .news__item-text
+      max-width: none
+
+   .main__blog
+      padding: 30px 0
+
+   .blog__inner
+      flex-direction: column
+
+   .blog__button
+      margin-bottom: 10px
+
+   .blog__content-title
+      margin-bottom: 30px
+
+   .blog__content-item
+      margin-bottom: 20px
+
+   .main__privacy
+      padding-bottom: 0
+
+   .privacy__content-title
+      margin: 30px 0
+
+   .privacy__ordered-list
+      margin-bottom: 20px
+
+   .intro__slider-arrows
+      display: none
+
+@media (max-width: $sm)
+   .intro__text
+      margin-bottom: 15px
+
+   .intro__text-title
+      font-size: 60px
+
+      &::before
+         font-size: 90px
+         right: 145px
+
+   .service__content-block
+      width: 100%
+
+   .service__text
+      max-width: 100%
+
+   .main__news,
+   .main__mission,
+   .main__team,
+   .main__benefits,
+   .main__clients,
+   .main__service
+      padding: 30px 0
+
+   .footer
+      margin-top: 0
+
+   .mission__title
+      font-size: 55px
+      bottom: 93%
+
+   .mission__inner-title
+      font-size: 23px
+      padding: 35px 15px 0 15px
+
+   .mission__inner-subtitle
+      font-size: 18px
+      padding: 0 15px 35px 15px
+
+   .modal__close
+      top: -30px
+      right: 0
+
+   .blog__button
+      margin-bottom: 25px
+
+   .clients__slider
+      max-width: 400px
+
+@media (max-width: $xs)
+   .intro__text-title
+      font-size: 40px
+
+      &::before
+         font-size: 70px
+         right: 90px
+
+   .head__title
+      font-size: 25px
+
+   .head__subtitle
+      font-size: 13px
+
+   .service__inner:after
+      font-size: 60px
+
+   .title
+      font-size: 35px
+
+   .clients__list-item
+      width: 50%
+      text-align: center
+      margin-right: 0
+
+   .clients__img
+      max-width: 130px
+
+   .clients__love
+      display: none
+
+   .mission__title
+      white-space: wrap
+      bottom: 93%
+      line-height: 100%
+
+   .mission__inner-title
+      font-size: 18px
+      padding: 35px 15px 0 15px
+
+   .mission__inner-subtitle
+      font-size: 15px
+      padding: 0 15px 35px 15px
+
+   .footer
+      background-image: none
+
+   .clients__slider
+      max-width: 260px
+
+   .clients__bottom
+      justify-content: center

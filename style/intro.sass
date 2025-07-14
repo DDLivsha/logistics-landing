@@ -1,0 +1,187 @@
+.intro
+   height: 600px
+   // background: url(/images/header/bg\ 1.jpg) no-repeat center / cover, #000
+   position: relative
+
+   &__slider
+      position: absolute
+      width: 100%
+      height: 100%
+      overflow: hidden
+      // display: none
+
+   &__slider.slick-initialized
+      display: block
+
+   &__slider .slick-list
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+   &__slider .slick-track
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+   &__slick-item
+      height: 100%
+      width: 100%
+      object-fit: cover
+
+.slick__img
+   object-fit: cover
+   width: 100%
+   height: 600px
+
+.intro__inner
+   height: 600px
+   display: flex
+   align-items: flex-end
+   justify-content: space-between
+   position: relative
+   z-index: 2
+
+.intro__text
+   margin-bottom: 52px
+
+.intro__form
+   position: relative
+   bottom: -30px
+
+.form
+   max-width: 400px
+   border-radius: 5px
+   background: #004af2
+   height: auto
+
+   &__head
+      max-height: 124px
+      height: 100%
+      border-radius: 5px 5px 0px 0px
+      background: #033fc9
+
+.head__title
+   color: #fff
+   font-family: var(--font-lato)
+   font-size: 30px
+   font-style: normal
+   font-weight: 900
+   line-height: normal
+   padding: 19px 0 8px 30px
+
+.head__subtitle
+   color: #fff
+   font-family: var(--font-pt-sans)
+   font-style: normal
+   font-weight: 400
+   line-height: normal
+   padding: 0 30px 21px 30px
+
+.form__content
+   padding: 0 30px
+   width: 100%
+   height: auto
+
+.form__label
+   display: flex
+   align-items: center
+   margin-top: 29px
+
+   &:first-child
+      margin-top: 25px
+
+.form__input
+   display: block
+   width: 100%
+   background: none
+   padding-bottom: 11px
+   transition: all 0.3s
+   position: relative
+   border-bottom: 2px solid rgba(255, 255, 255, 0.25)
+
+   &:focus
+      border-bottom: 2px solid rgba(255, 255, 255, 1)
+
+   &
+      display: inline-flex
+      width: 100%
+      background: none
+      padding-bottom: 11px
+      transition: all 0.3s
+      position: relative
+      border-bottom: 2px solid rgba(255, 255, 255, 0.25)
+
+.form__input::placeholder,
+.form__input
+   color: #fff
+   font-family: var(--font-pt-sans)
+   font-size: 16px
+   font-style: normal
+   font-weight: 400
+   line-height: normal
+   position: relative
+
+.name__icon
+   transform: translate(-50%, -50%)
+   padding-left: 30px
+   margin-right: -15px
+
+.phone__icon
+   transform: translate(-50%, -50%)
+   padding-left: 30px
+   margin-right: -15px
+
+.mail__icon
+   transform: translate(-50%, -50%)
+   padding-left: 30px
+   margin-right: -15px
+
+.form__button
+   width: 100%
+   margin: 34px 0 30px 0
+
+.intro__text
+   max-width: 380px
+
+   &-subtitle
+      color: #fff
+      text-align: right
+      font-family: var(--font-pt-sans)
+      font-style: normal
+      font-weight: 400
+
+   &-title
+      color: rgba(255, 255, 255, 0.8)
+      text-align: right
+      font-family: var(--font-lato)
+      font-size: 110px
+      font-style: normal
+      font-weight: 700
+      line-height: 90.909%
+      position: relative
+
+   &-title::before
+      content: "&"
+      position: absolute
+      color: rgba(255, 255, 255, 0.2)
+      text-align: right
+      font-family: var(--font-lato)
+      font-size: 170px
+      font-style: normal
+      font-weight: 900
+      line-height: 58.824%
+      top: 50%
+      right: -60px
+      transform: translate(-50%, -50%)
+
+.intro__slider-arrows
+   position: absolute
+   bottom: 30px
+   left: 440px
+
+.intro__slider-next
+   background: none
+   margin-left: 8px
+
+.intro__slider-prev
+   background: none

@@ -1,0 +1,52 @@
+.burger
+   display: none
+   background: none
+
+.header
+   background-color: rgba(0, 0, 0, 0.2)
+   height: 85px
+   width: 100%
+   position: fixed
+   z-index: 1000
+   transition: all 0.3s
+
+   &--dark
+      background-color: rgba(0, 0, 0, 0.9)
+
+   &__inner
+      display: flex
+      width: 100%
+      justify-content: space-between
+      align-items: center
+      height: 85px
+
+   &__nav-list
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: nowrap
+
+   &__nav-item
+      display: flex
+      align-items: center
+      transition: all 0.3s
+      height: 85px
+      cursor: pointer
+
+   &__nav-item--active
+      background-color: #004af2
+      display: flex
+      align-items: center
+      height: 85px
+
+   &__nav-item:hover
+      background-color: #004af2
+
+   &__nav-link
+      color: #fff
+      font-family: var(--font-lato)
+      font-style: normal
+      font-weight: 400
+      line-height: normal
+      white-space: nowrap
+      padding: 0 15px

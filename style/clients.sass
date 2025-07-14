@@ -1,0 +1,162 @@
+.main__clients
+   padding: 60px 0
+
+.clients__title
+   margin-bottom: 55px
+
+.clients__inner
+   display: flex
+   justify-content: space-between
+
+.clients__logos-list
+   display: flex
+   flex-wrap: wrap
+   position: relative
+   min-height: 401px
+   align-items: center
+
+   &::before
+      content: ""
+      display: block
+      background: url(/images/clients/map.jpg) no-repeat
+      position: absolute
+      width: 100%
+      height: 100%
+      top: -12px
+      left: -35px
+      z-index: -1
+      opacity: 0.2
+
+.clients__list-item
+   margin-right: 50px
+   margin-bottom: 10px
+   z-index: 10
+
+   &:nth-child(7n)
+      margin-bottom: 0
+
+   &:nth-child(8n)
+      margin-bottom: 0
+
+.clients__slider
+   max-width: 520px
+   height: auto
+   margin-left: 10px
+
+.clients .slick-dots
+   display: flex
+   margin-top: 15px
+   align-items: center
+   justify-content: center
+
+   & button
+      background: none
+      border: none
+      font-size: 0
+      width: 10px
+      height: 10px
+      background-color: #c4c4c4
+      border-radius: 50%
+      transition: all 0.3s
+
+   & button:focus
+      box-shadow: 0px 0px 0px 5px rgba(0, 74, 242, 0.11)
+
+   & li
+      margin-right: 17px
+
+   & li:last-child
+      margin-right: 0
+
+.clients .slick-active button
+   background-color: #004af2
+   box-shadow: 0px 0px 0px 5px rgba(0, 74, 242, 0.11)
+
+.clients__slide
+   position: relative
+
+   &::before
+      content: ""
+      background: url(/images/clients/avatar-lines.svg) 0 0 / 100% no-repeat
+      width: 100px
+      height: 135px
+      position: absolute
+      top: -67px
+      left: 15px
+      transform: translateY(50%)
+
+   &-header
+      display: flex
+      align-items: center
+      padding-left: 10px
+      padding-top: 10px
+
+.clients__img-box
+   margin-bottom: 35px
+   margin-right: 20px
+   position: relative
+
+.clients__header-img
+   border-radius: 50%
+   border: 5px solid #fff
+   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16)
+
+.clients__title-wrapper
+   display: flex
+   flex-direction: column
+   transform: translateY(-45%)
+   flex-grow: 1
+
+.clients__header-title
+   color: #2c2c2c
+   font-family: var(--font-lato)
+   font-size: 18px
+   font-weight: 900
+   line-height: normal
+   flex-grow: 1
+
+.clients__header-subtitle
+   color: #2c2c2c
+   font-family: var(--font-lato)
+   font-weight: 400
+   line-height: normal
+   flex-grow: 1
+
+.slider__content-text
+   color: #585858
+   font-family: var(--font-lato)
+   font-style: normal
+   font-weight: 400
+   line-height: 180%
+   margin-bottom: 40px
+   text-indent: 20px
+
+   &:last-child
+      margin-bottom: 0
+      text-indent: 0
+
+.clients__bottom
+   margin-top: 60px
+   display: flex
+   align-items: center
+
+.clients__button
+   margin-right: 40px
+
+.clients__love
+   color: #464646
+   font-family: var(--font-pt-sans)
+   font-size: 18px
+   font-style: normal
+   font-weight: 400
+   line-height: normal
+   position: relative
+
+   &::before
+      content: ""
+      background: url(/images/clients/heart-bg.svg) 0 0 / 100% no-repeat
+      width: 49px
+      height: 47px
+      position: absolute
+      top: -20%
+      left: 20px

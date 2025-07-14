@@ -1,0 +1,63 @@
+.main__benefits
+   padding: 60px 0
+
+.benefits__inner
+   display: flex
+   justify-content: space-between
+
+.benefits__content
+   display: flex
+   margin-right: 20px
+
+.benefits__list
+   padding-left: 50px
+   background-image: linear-gradient(to bottom, #fff 40%, #a5a5a5 40%)
+   background-size: 2px 35px
+   background-repeat: repeat-y
+   background-position: left 12px top -3px
+   position: relative
+
+.benefits__list::before,
+.benefits__list::after
+   content: ""
+   width: 26px
+   height: 36px
+   background-color: #fff
+
+.benefits__list::before
+   background: url(/images/icons/way-start.svg) 0 0 / 100% no-repeat
+   position: absolute
+   top: -0
+   left: 0
+   background-color: #fff
+
+.benefits__list::after
+   background: url(/images/icons/way-end.svg) 0 0 / 100% no-repeat
+   position: absolute
+   bottom: -10px
+   left: 0
+   background-color: #fff
+
+.benefits__list-item
+   max-width: 315px
+   margin-bottom: 35px
+
+   &:last-child
+      margin: 0
+
+.benefits__list-title
+   color: #2c2c2c
+   font-family: var(--font-lato)
+   font-size: 21px
+   font-style: normal
+   font-weight: 900
+   line-height: normal
+   margin-bottom: 12px
+
+.benefits__list-text
+   color: #585858
+   font-weight: 400
+
+.benefits__img
+   height: auto
+   width: 100%

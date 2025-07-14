@@ -1,1 +1,60 @@
-@import "tailwindcss"
+@use "../style/header.sass"
+@use "../style/intro.sass"
+@use "../style/service.sass"
+@use "../style/clients.sass"
+@use "../style/benefits.sass"
+@use "../style/team.sass"
+@use "../style/mission.sass"
+@use "../style/news.sass"
+@use "../style/footer.sass"
+@use "../style/breakpoints.sass"
+
+@use"tailwindcss"
+
+:root
+   --font-lato: 'Lato', sans-serif
+   --font-pt-sans: 'PT Sans', sans-serif
+
+body
+   font-family: var(--font-pt-sans)
+   font-size: 15px
+   color: #585858
+   line-height: 140%
+   overflow-x: hidden
+
+input
+   outline: none
+
+.container
+   margin: 0 auto
+   max-width: 1230px
+   width: 100%
+   padding: 0 15px
+
+.button
+   display: inline-block
+   border-radius: 5px
+   background: linear-gradient(90deg, #ff903e 0%, #ff2c2c 100%)
+   color: #fff
+   font-family: var(--font-pt-sans)
+   font-size: 18px
+   font-weight: bold
+   line-height: normal
+   text-align: center
+   padding: 11px 45px
+   box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2)
+   transition: all 0.3s
+   &:hover
+      transform: scale(1.05)
+
+.title
+   color: #2c2c2c
+   font-family: var(--font-lato)
+   font-size: 45px
+   font-style: normal
+   font-weight: 900
+   line-height: normal
+   & span
+      color: #004af2
+
+// @import "../style/fonts.sass"
