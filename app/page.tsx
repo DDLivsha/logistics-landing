@@ -1,10 +1,11 @@
 import Benefits from "@/components/Benefits/Benefits";
+import Blog from "@/components/Blog/Blog";
 import Clients from "@/components/Clients/Clients";
 import Intro from "@/components/Intro/Intro";
 import Mission from "@/components/Mission/Mission";
 import Services from "@/components/Services/Services";
 import Team from "@/components/Team/Team";
-import { benefits, imgData, services, sliderData, team } from "@/helpers/localData";
+import { benefits, imgData, news, services, sliderData, team } from "@/helpers/localData";
 import { Metadata } from "next";
 
 
@@ -46,44 +47,9 @@ export default function Home() {
           <Mission />
         </section>
 
-        {/* <section className="main__news news" id="news">
-          <div className="container">
-            <h2 className="clients__title title" ><span>Interesting</span> to read</h2>
-            <ul className="news__list">
-              <li className="news__list-item" >
-                <article className="news__list-article">
-                  <a className="news__item-link" href="#">
-                    <h4 className="news__item-title">News title</h4>
-                    <p className="news__item-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                      diam
-                      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                      voluptua.
-                      At
-                      vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                      takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                    <time dateTime="21-03-2019" className="news__item-time">21 March, 2019</time>
-                  </a>
-                </article>
-              </li>
-              <li className="news__list-item">
-                <article className="news__list-article">
-                  <a className="news__item-link" href="#">
-                    <h4 className="news__item-title">News title</h4>
-                    <p className="news__item-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                      diam
-                      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                      voluptua.
-                      At
-                      vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                      takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                    <time dateTime="21-03-2019" className="news__item-time">21 March, 2019</time>
-                  </a>
-                </article>
-              </li>
-            </ul>
-            <a href="news.html" className="news__button button">Visit blog</a>
-          </div>
-        </section> */}
+        <section className="main__news news" id="news">
+          <Blog data={news} />
+        </section>
       </main>
     </>
   );

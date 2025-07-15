@@ -5,6 +5,7 @@ import { TeamMember } from "@/interfaces/teamMember";
 import member1 from "@/assets/images/team/John-1.jpg"
 import member2 from "@/assets/images/team/Daniel.jpg"
 import member3 from "@/assets/images/team/Anna.jpg"
+import { News } from "@/interfaces/news";
 
 export const services: Service[] = [
    {
@@ -107,4 +108,29 @@ export const benefits: Benefit[] = [
    {
       title: 'Personal manager', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor'
    },
+]
+
+export const news: News[] = [
+   {
+      title: 'News title',
+      text: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                        diam
+                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                        voluptua.
+                        At
+                        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata sanctus est Lorem ipsum dolor sit amet.`,
+      date: '21 March, 2019'
+   },
+   {
+      title: 'News title',
+      text: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                        diam
+                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                        voluptua.
+                        At
+                        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata sanctus est Lorem ipsum dolor sit amet.`,
+      date: '21 March, 2019'
+   }
 ]
