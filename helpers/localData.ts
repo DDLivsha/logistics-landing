@@ -1,3 +1,4 @@
+import { Benefit } from "@/interfaces/benefit";
 import { Client } from "@/interfaces/client";
 import { Service } from "@/interfaces/service";
 import { TeamMember } from "@/interfaces/teamMember";
@@ -32,8 +33,8 @@ export const sliderData: Client[] = [
       image: '/review-photo.jpg',
       content: [
          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor...',
-         'Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.' 
-      ] 
+         'Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+      ]
    },
    {
       name: 'John Smith',
@@ -90,9 +91,17 @@ export const team: TeamMember[] = [
    },
 ]
 
-export const benefits: { title: string }[] = [
-   { title: 'Safety' },
-   { title: 'High quality drivers' },
-   { title: 'Guarantee & Support 24/7' },
-   { title: 'Personal manager' },
+export const benefits: Benefit[] = [
+   {
+      title: 'Safety', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor'
+   },
+   {
+      title: 'High quality drivers', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor'
+   },
+   {
+      title: 'Guarantee & Support 24/7', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor'
+   },
+   {
+      title: 'Personal manager', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor'
+   },
 ]

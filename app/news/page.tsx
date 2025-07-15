@@ -40,8 +40,8 @@ export default function News() {
             <div className="blog__inner">
                <div className="blog__content">
                   <ul className="blog__content-list">
-                     <h2 className="blog__content-title title" data-aos="fade-down"><span>Interesting</span> to read</h2>
-                     <li className="blog__content-item" data-aos="flip-down" data-aos-delay="50" data-aos-anchor=".title">
+                     <h2 className="blog__content-title title" ><span>Interesting</span> to read</h2>
+                     <li className="blog__content-item">
                         <article className="blog__item-article">
                            <a className="blog__item-link" href="#">
                               <h4 className="blog__item-title">News title</h4>
@@ -56,7 +56,7 @@ export default function News() {
                            </a>
                         </article>
                      </li>
-                     <li className="blog__content-item" data-aos="flip-down" data-aos-delay="150" data-aos-anchor=".title">
+                     <li className="blog__content-item">
                         <article className="blog__item-article">
                            <a className="blog__item-link" href="#">
                               <h4 className="blog__item-title">News title</h4>
@@ -71,7 +71,7 @@ export default function News() {
                            </a>
                         </article>
                      </li>
-                     <li className="blog__content-item" data-aos="flip-down" data-aos-delay="250" data-aos-anchor=".title">
+                     <li className="blog__content-item">
                         <article className="blog__item-article">
                            <a className="blog__item-link" href="#">
                               <h4 className="blog__item-title">News title</h4>
@@ -86,7 +86,7 @@ export default function News() {
                            </a>
                         </article>
                      </li>
-                     <li className="blog__content-item" data-aos="flip-down" data-aos-delay="350" data-aos-anchor=".title">
+                     <li className="blog__content-item">
                         <article className="blog__item-article">
                            <a className="blog__item-link" href="#">
                               <h4 className="blog__item-title">News title</h4>
@@ -102,9 +102,9 @@ export default function News() {
                         </article>
                      </li>
                   </ul>
-                  <a href="index.html" className="blog__button button" data-aos="fade-up">Back to home</a>
+                  <a href="index.html" className="blog__button button" >Back to home</a>
                </div>
-               <div className="blog__form form" data-aos="fade-left">
+               <div className="blog__form form">
                   <div className="form__head blog__form-head">
                      <h3 className="head__title">Get Callback</h3>
                      <h5 className="head__subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -123,7 +123,7 @@ export default function News() {
                         <img src="images/icons/mail.svg" alt="mail" className="mail__icon"/>
                         <input type="email" className="form__input mail__input" placeholder="Your e-mail"/>
                      </label>
-                     <button className="form__button button" type="submit" data-thanks="#ThanksModal">Call me back</button>
+                     <button className="form__button button" type="submit" >Call me back</button>
                   </form>
                </div>
             </div>
@@ -162,7 +162,7 @@ export default function News() {
                   <a href="mailto:hello@centerlogistic.com" className="modal__info-link">hello@centerlogistic.com</a>
                </p>
             </div>
-            <button className="modal__close" data-close>
+            <button className="modal__close">
                <img src="images/icons/close.svg" alt="close"/>
             </button>
          </div>

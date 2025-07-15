@@ -4,17 +4,15 @@
 .benefits__inner
    display: flex
    justify-content: space-between
-
-.benefits__content
-   display: flex
-   margin-right: 20px
+   align-items: center
+   gap: 20px
 
 .benefits__list
    padding-left: 50px
    background-image: linear-gradient(to bottom, #fff 40%, #a5a5a5 40%)
    background-size: 2px 35px
    background-repeat: repeat-y
-   background-position: left 12px top -3px
+   background-position: left 12px top 0px
    position: relative
 
 .benefits__list::before,
@@ -41,7 +39,6 @@
 .benefits__list-item
    max-width: 315px
    margin-bottom: 35px
-
    &:last-child
       margin: 0
 
@@ -58,9 +55,13 @@
    color: #585858
    font-weight: 400
 
-.benefits__img
-   height: auto
-   width: 100%
+// .benefits__img
+//    height: auto
+//    width: 100%
+//    &-box
+//       position: relative
+//       height: auto
+//       width: 100%
 
 .swiper
    padding-bottom: 20px !important

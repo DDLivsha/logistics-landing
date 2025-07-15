@@ -26,7 +26,7 @@ export default function Intro() {
                   </div>
                   <IntroForm />
                </div>
-               <div className="intro__text" data-aos="fade-left">
+               <div className="intro__text">
                   <p className="intro__text-subtitle">USA, Europe, Asia</p>
                   <h1 className="intro__text-title">Trans
                      Logistic</h1>

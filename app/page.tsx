@@ -1,7 +1,8 @@
+import Benefits from "@/components/Benefits/Benefits";
 import Clients from "@/components/Clients/Clients";
 import Intro from "@/components/Intro/Intro";
 import Services from "@/components/Services/Services";
-import { imgData, services, sliderData } from "@/helpers/localData";
+import { benefits, imgData, services, sliderData } from "@/helpers/localData";
 import { Metadata } from "next";
 
 
@@ -34,30 +35,13 @@ export default function Home() {
           />
         </section>
 
-        {/* <section className="main__benefits benefits" id="benefits" data-scrollspy="#benefits">
-          <div className="container">
-            <div className="benefits__inner">
-              <div className="benefits__content">
-                <ul className="benefits__list">
-                  {benefits.map((item, key) => (
-                    <li key={key} className="benefits__list-item">
-                      <h4 className="benefits__list-title">{item.title}</h4>
-                      <p className="benefits__list-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                        nonumy eirmod tempor </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="benefits__img-box" data-aos="fade-left" data-aos-delay="200">
-                <img src="images/way-truck.jpg" alt="truck" className="benefits__img" />
-              </div>
-            </div>
-          </div>
-        </section> */}
+        <section className="main__benefits benefits" id="benefits">
+          <Benefits data={benefits} />
+        </section>
 
-        {/* <section className="main__team team" id="team" data-scrollspy="#team">
+        {/* <section className="main__team team" id="team">
           <div className="container">
-            <h2 className="team__title title" data-aos="fade-down"><span>Our</span> Team</h2>
+            <h2 className="team__title title" ><span>Our</span> Team</h2>
             <div className="team__inner">
               <ul className="team__content-list">
                 {team.map((item, key) => (
@@ -86,7 +70,7 @@ export default function Home() {
           <div className="container">
             <div className="mission__content-wrapper">
               <h2 className="mission__title">Our mission</h2>
-              <div className="mission__inner" data-aos="fade-up">
+              <div className="mission__inner">
                 <h3 className="mission__inner-title">To provide our customer qualified services according the
                   international</h3>
                 <p className="mission__inner-subtitle">Book your Cargo now & Your job just got a lot easier</p>
@@ -102,11 +86,11 @@ export default function Home() {
           </div>
         </section> */}
 
-        {/* <section className="main__news news" id="news" data-scrollspy="#news">
+        {/* <section className="main__news news" id="news">
           <div className="container">
-            <h2 className="clients__title title" data-aos="fade-down"><span>Interesting</span> to read</h2>
+            <h2 className="clients__title title" ><span>Interesting</span> to read</h2>
             <ul className="news__list">
-              <li className="news__list-item" data-aos="flip-down">
+              <li className="news__list-item" >
                 <article className="news__list-article">
                   <a className="news__item-link" href="#">
                     <h4 className="news__item-title">News title</h4>
@@ -121,7 +105,7 @@ export default function Home() {
                   </a>
                 </article>
               </li>
-              <li className="news__list-item" data-aos="flip-down">
+              <li className="news__list-item">
                 <article className="news__list-article">
                   <a className="news__item-link" href="#">
                     <h4 className="news__item-title">News title</h4>
@@ -137,7 +121,7 @@ export default function Home() {
                 </article>
               </li>
             </ul>
-            <a href="news.html" className="news__button button" data-aos="fade-up">Visit blog</a>
+            <a href="news.html" className="news__button button">Visit blog</a>
           </div>
         </section> */}
       </main>

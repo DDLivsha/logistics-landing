@@ -22,7 +22,7 @@ const Clients: FC<Props> = ({ imgData, sliderData }) => {
 
    return (
       <div className="container">
-         <h2 className="clients__title title" data-aos="fade-down"><span>Our</span> Clients</h2>
+         <h2 className="clients__title title"><span>Our</span> Clients</h2>
          <div className="clients__inner">
             <ul className="clients__logos-list">
                {imgData.map((item, key) => (
