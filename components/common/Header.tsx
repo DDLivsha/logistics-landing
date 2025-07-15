@@ -2,6 +2,8 @@
 import { useState, useEffect, useRef } from 'react'
 import Logo from '@/assets/images/logo.svg'
 import { useModalStore } from '@/helpers/zustand'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 const navigation = [
    { name: "Services", id: "service" },
@@ -13,6 +15,7 @@ const navigation = [
 export default function Header() {
 
    const { open } = useModalStore()
+   const pathname = usePathname()
 
    //================= SCROLL FOR NAV ======================
    const [activeSection, setActiveSection] = useState<string | null>(null)
@@ -69,11 +72,30 @@ export default function Header() {
                </a>
                <nav className="header__nav" id="header__nav">
                   <ul className="header__nav-list">
-                     {navigation.map((item, index) => (
+                     {pathname === '/' && navigation.map((item, index) => (
                         <li className={`header__nav-item${activeSection === item.id ? '--active' : ''} header__nav-link`} key={index} onClick={() => handleClick(item.id)}>
                            {item.name}
                         </li>
                      ))}
+                     {pathname !== '/' &&
+                        <>
+                           <Link href={'/'}>
+                              < li className={`header__nav-item header__nav-link`}>
+                                 Home page
+                              </li>
+                           </Link>
+                           {pathname === '/news' && <Link href={'/privacy'}>
+                              < li className={`header__nav-item header__nav-link`}>
+                                 Privacy policy
+                              </li>
+                           </Link>}
+                           {pathname === '/privacy' && <Link href={'/news'}>
+                              < li className={`header__nav-item header__nav-link`}>
+                                 Our blog
+                              </li>
+                           </Link>}
+                        </>
+                     }
                      <button
                         className="header__nav-item header__nav-link"
                         onClick={open}
@@ -92,6 +114,6 @@ export default function Header() {
 
             </div>
          </div>
-      </header>
+      </header >
    )
 }

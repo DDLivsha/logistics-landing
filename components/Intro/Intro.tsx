@@ -28,8 +28,8 @@ export default function Intro() {
                </div>
                <div className="intro__text">
                   <p className="intro__text-subtitle">USA, Europe, Asia</p>
-                  <h1 className="intro__text-title">Trans
-                     Logistic</h1>
+                  <div className="intro__text-title">Trans
+                     Logistic</div>
                </div>
             </div>
          </div>
