@@ -4,6 +4,7 @@ import "./tailwind.css";
 import { Lato, PT_Sans } from 'next/font/google'
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import ContactFormModal from "@/components/modals/ContactFormModal";
 
 export const metadata: Metadata = {
   title: "Logistic landing",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ContactFormModal />
       </body>
     </html>
   );

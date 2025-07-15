@@ -16,11 +16,12 @@ export interface IForm {
 const IntroForm: FC = () => {
 
    const { openSuccessModal } = useModalStore()
-   const { register, handleSubmit, formState: { errors } } = useForm<IForm>({ mode: 'onBlur' })
+   const { register, handleSubmit, formState: { errors }, reset } = useForm<IForm>({ mode: 'onBlur' })
 
    const onSubmit = (data: IForm) => {
       console.log(data)
       openSuccessModal()
+      reset()
    }
 
    return (

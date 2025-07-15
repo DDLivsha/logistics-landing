@@ -1,5 +1,6 @@
 import React from 'react'
 import LogoBlack from '@/assets/images/logo-black.svg'
+import Link from 'next/link'
 
 export default function Footer() {
    return (
@@ -14,8 +15,8 @@ export default function Footer() {
             </h6>
             <nav className="footer__nav">
                <a href="#" className="footer__nav-item">Terms & Contidions</a>
-               <a href="privacy.html" className="footer__nav-item">Privacy Policy</a>
-               <a href="news.html" className="footer__nav-item">Our blog</a>
+               <Link href="/privacy" className="footer__nav-item">Privacy Policy</Link>
+               <Link href="/news" className="footer__nav-item">Our blog</Link>
             </nav>
          </div>
       </footer>
