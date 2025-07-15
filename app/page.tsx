@@ -2,7 +2,8 @@ import Benefits from "@/components/Benefits/Benefits";
 import Clients from "@/components/Clients/Clients";
 import Intro from "@/components/Intro/Intro";
 import Services from "@/components/Services/Services";
-import { benefits, imgData, services, sliderData } from "@/helpers/localData";
+import Team from "@/components/Team/Team";
+import { benefits, imgData, services, sliderData, team } from "@/helpers/localData";
 import { Metadata } from "next";
 
 
@@ -25,10 +26,7 @@ export default function Home() {
           <Services data={services} />
         </section>
 
-        <section
-          className="main__clients clients"
-          id="clients"
-        >
+        <section className="main__clients clients" id="clients">
           <Clients
             imgData={imgData}
             sliderData={sliderData}
@@ -39,32 +37,9 @@ export default function Home() {
           <Benefits data={benefits} />
         </section>
 
-        {/* <section className="main__team team" id="team">
-          <div className="container">
-            <h2 className="team__title title" ><span>Our</span> Team</h2>
-            <div className="team__inner">
-              <ul className="team__content-list">
-                {team.map((item, key) => (
-                  <li key={key} className="team__content-item">
-                    <div className="team__img-box">
-                      <img src={item.image} alt="John" className="team__img" />
-                    </div>
-                    <h4 className="team__item-title">{item.name}</h4>
-                    <p className="team__item-subtitle">{item.position}</p>
-                    <div className="team__mail">
-                      <img src="images/icons/mail-black.svg" alt="mail" className="team__mail-img" />
-                      <a href="mailto:john@centerlogistic.com" className="team__mail-link">{item.email}</a>
-                    </div>
-                    <div className="team__phone">
-                      <img src="images/icons/phone-black.svg" alt="phone" className="team__phone-img" />
-                      <a href="tel:987412512543" className="team__phone-link">{item.phone}</a>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section> */}
+        <section className="main__team team" id="team">
+          <Team data={team} />
+        </section>
 
         {/* <section className="main__mission mission">
           <div className="container">

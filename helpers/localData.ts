@@ -2,6 +2,9 @@ import { Benefit } from "@/interfaces/benefit";
 import { Client } from "@/interfaces/client";
 import { Service } from "@/interfaces/service";
 import { TeamMember } from "@/interfaces/teamMember";
+import member1 from "@/assets/images/team/John-1.jpg"
+import member2 from "@/assets/images/team/Daniel.jpg"
+import member3 from "@/assets/images/team/Anna.jpg"
 
 export const services: Service[] = [
    {
@@ -71,21 +74,21 @@ export const team: TeamMember[] = [
    {
       name: "John Smith",
       position: "Logistic manager - 8 years experience",
-      image: "@/assets/images/team/John-1.jpg",
+      image: member1,
       email: 'john@centerlogistic.com',
       phone: '+987412512543'
    },
    {
       name: "Daniel Kore",
       position: "Software engineer",
-      image: "@/assets/images/team/Daniel.jpg",
+      image: member2,
       email: 'john@centerlogistic.com',
       phone: '+987412512543'
    },
    {
       name: "Anna Smith",
       position: "Logistic manager - 8 years experience",
-      image: "@/assets/images/team/Anna.jpg",
+      image: member3,
       email: 'john@centerlogistic.com',
       phone: '+987412512543'
    },
