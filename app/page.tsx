@@ -1,6 +1,7 @@
 import Benefits from "@/components/Benefits/Benefits";
 import Clients from "@/components/Clients/Clients";
 import Intro from "@/components/Intro/Intro";
+import Mission from "@/components/Mission/Mission";
 import Services from "@/components/Services/Services";
 import Team from "@/components/Team/Team";
 import { benefits, imgData, services, sliderData, team } from "@/helpers/localData";
@@ -41,25 +42,9 @@ export default function Home() {
           <Team data={team} />
         </section>
 
-        {/* <section className="main__mission mission">
-          <div className="container">
-            <div className="mission__content-wrapper">
-              <h2 className="mission__title">Our mission</h2>
-              <div className="mission__inner">
-                <h3 className="mission__inner-title">To provide our customer qualified services according the
-                  international</h3>
-                <p className="mission__inner-subtitle">Book your Cargo now & Your job just got a lot easier</p>
-                <div className="mission__lines">
-                  <div className="mission__blue-line"></div>
-                  <div className="mission__orange-line"></div>
-                </div>
-              </div>
-            </div>
-            <div className="mission__button-wrapper">
-              <a href="#" target="_blank" className="mission__button button">Become a client</a>
-            </div>
-          </div>
-        </section> */}
+        <section className="main__mission mission">
+          <Mission />
+        </section>
 
         {/* <section className="main__news news" id="news">
           <div className="container">
