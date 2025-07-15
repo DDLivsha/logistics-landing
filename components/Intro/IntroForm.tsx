@@ -5,6 +5,7 @@ import Phone from '@/assets/images/icons/phone.svg'
 import Email from '@/assets/images/icons/mail.svg'
 import { useModalStore } from '@/helpers/zustand'
 import { useForm } from 'react-hook-form'
+import Button from '../common/Button'
 
 export interface IForm {
    name: string,
@@ -51,10 +52,7 @@ const IntroForm: FC = () => {
             />
             {errors.email && <span className="form__error">{errors.email.message}</span>}
          </label>
-         <button
-            className="form__button button"
-            type="submit"
-         >Call me back</button>
+         <Button className="form__button" type="submit">Call me back</Button>
       </form>
    )
 }

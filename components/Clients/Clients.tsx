@@ -7,12 +7,19 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import Image from 'next/image'
+import { useModalStore } from '@/helpers/zustand'
+import Button from '../common/Button'
+
 
 interface Props {
    imgData: { img: string }[]
    sliderData: Client[]
 }
 const Clients: FC<Props> = ({ imgData, sliderData }) => {
+
+   const { open } = useModalStore()
+
+
    return (
       <div className="container">
          <h2 className="clients__title title" data-aos="fade-down"><span>Our</span> Clients</h2>
@@ -35,10 +42,9 @@ const Clients: FC<Props> = ({ imgData, sliderData }) => {
                   loop
                   spaceBetween={50}
                   slidesPerView={1}
-
                >
                   {sliderData.map((client, index) => (
-                     <SwiperSlide key={index} className="!mb-6">
+                     <SwiperSlide key={index}>
                         <div className="clients__slide">
                            <div className="clients__slide-header">
                               <div className="clients__img-box">
@@ -69,9 +75,8 @@ const Clients: FC<Props> = ({ imgData, sliderData }) => {
             </div>
 
          </div>
-         <div className="clients__bottom" data-aos="fade-up">
-            <a href="#" target="_blank" className="clients__button button" data-modal="#BecomeCLientModal">Become a
-               client</a>
+         <div className="clients__bottom">
+            <Button onClick={() => open()}>Become a client</Button>
             <p className="clients__love">we love our clients</p>
          </div>
       </div>
