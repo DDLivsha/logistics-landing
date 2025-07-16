@@ -3,15 +3,11 @@ import * as motion from "motion/react-client"
 import Button from '../common/Button'
 import MissionButtonWrapper from './MissionButtonWrapper'
 
-interface Props {
-   className?: string
-}
-const Mission: FC<Props> = ({ className }) => {
+const Mission: FC = () => {
    return (
       <div className="container">
-         <div className="mission__content-wrapper">
-            <h2 className="mission__title">Our mission</h2>
             <div className="mission__inner">
+            <h2 className="mission__title">Our mission</h2>
                <h3 className="mission__inner-title">To provide our customer qualified services according the
                   international</h3>
                <p className="mission__inner-subtitle">Book your Cargo now & Your job just got a lot easier</p>
@@ -30,7 +26,6 @@ const Mission: FC<Props> = ({ className }) => {
                   />
                </div>
             </div>
-         </div>
          <MissionButtonWrapper />
       </div>
    )

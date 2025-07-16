@@ -38,10 +38,10 @@ export default function Home() {
         <section className="main__team" id="team">
           <Team data={team} />
         </section>
-        <section className="main__mission mission">
+        <section className="main__mission">
           <Mission />
         </section>
-        <section className="main__news news" id="news">
+        <section className="main__news" id="news">
           <Blog data={news} />
         </section>
       </main>

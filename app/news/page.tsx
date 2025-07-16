@@ -21,15 +21,13 @@ export default function News() {
                      <div className="flex flex-col gap-[45px] max-w-[600px]">
                         <h2 className="title" ><span>Interesting</span> to read</h2>
                         {news.map((item, key) => (
-                           <div key={key} className="news__list-item" >
-                              <article className="news__list-article">
-                                 <a className="news__item-link" href="/news">
-                                    <h4 className="news__item-title">{item.title}</h4>
-                                    <p className="news__item-text">{item.text}</p>
-                                    <time dateTime="21-03-2019" className="news__item-time">{item.date}</time>
-                                 </a>
-                              </article>
-                           </div>
+                           <article key={key} className="news__list-item">
+                              <a className="news__item-link" href="/news">
+                                 <h4 className="news__item-title">{item.title}</h4>
+                                 <p className="news__item-text">{item.text}</p>
+                                 <time dateTime="21-03-2019" className="news__item-time">{item.date}</time>
+                              </a>
+                           </article>
                         ))}
                      </div>
                      <PrivacyButtonWrapper />
