@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.sass";
 import "./tailwind.css";
 import { Lato, PT_Sans } from 'next/font/google'
-import Header from "@/components/common/Header";
-import Footer from "@/components/common/Footer";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import ContactFormModal from "@/components/modals/ContactFormModal";
 
 export const metadata: Metadata = {
@@ -25,11 +25,7 @@ const ptSans = PT_Sans({
   display: 'swap',
 })
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en" className={`${lato.variable} ${ptSans.variable}`}>
       <body>

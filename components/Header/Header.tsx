@@ -64,12 +64,11 @@ export default function Header() {
 
    return (
       <header className="header" id="header">
-         <div className="overlay" />
          <div className="container">
             <div className="header__inner">
-               <a href="/" className="header__logo">
+               <Link href="/" className="header__logo">
                   <Logo className="header__logo-img" />
-               </a>
+               </Link>
                <nav className="header__nav" id="header__nav">
                   <ul className="header__nav-list">
                      {pathname === '/' && navigation.map((item, index) => (
@@ -104,14 +103,7 @@ export default function Header() {
                      </button>
                   </ul>
                </nav>
-
-               <button className="burger" id="navToggle">
-                  <span className="burger__line"></span>
-                  <span className="burger__line"></span>
-                  <span className="burger__line"></span>
-                  <span className="burger__line"></span>
-               </button>
-
+               
             </div>
          </div>
       </header >

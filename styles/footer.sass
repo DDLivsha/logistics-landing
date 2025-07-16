@@ -10,7 +10,6 @@
       display: flex
       flex-direction: column
       align-items: center
-      margin: 0 30px
 
    &__logo
       margin-bottom: 20px
@@ -21,7 +20,6 @@
       text-align: center
       font-family: var(--font-pt-sans)
       font-size: 12px
-      font-style: normal
       font-weight: 700
       line-height: 150%
       white-space: nowrap
@@ -38,12 +36,7 @@
       line-height: 150%
       white-space: nowrap
 
-.footer__nav-item:hover,
-.footer__info-link:hover
-   text-decoration: underline
-
-.footer__nav-item
+.footer__nav-item:not(:last-child)
    margin-right: 20px
-
-   &:last-child
-      margin-right: 0px
+   &:hover
+      text-decoration: underline
