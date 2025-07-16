@@ -11,27 +11,25 @@ const Team: FC<Props> = ({ data }) => {
    return (
       <div className="container">
          <h2 className="team__title title" ><span>Our</span> Team</h2>
-         <div className="team__inner">
-            <ul className="team__content-list">
-               {data.map((item, key) => (
-                  <li key={key} className="team__content-item">
-                     <div className="team__img-box">
-                        <Image width={370} height={195} src={item.image} alt="John" />
-                     </div>
-                     <h4 className="team__item-title">{item.name}</h4>
-                     <p className="team__item-subtitle">{item.position}</p>
-                     <div className="team__mail">
-                        <MailBlack className="team__mail-img" />
-                        <a href={`mailto:${item.email}`}className="team__mail-link">{item.email}</a>
-                     </div>
-                     <div className="team__phone">
-                        <PhoneBlack className="team__phone-img" />
-                        <a href={`tel:${item.phone}`} className="team__phone-link">{item.phone}</a>
-                     </div>
-                  </li>
-               ))}
-            </ul>
-         </div>
+         <ul className="team__content-list">
+            {data.map((item, key) => (
+               <li key={key} className="team__content-item">
+                  <div className="team__img-box">
+                     <Image width={370} height={195} src={item.image} alt="John" />
+                  </div>
+                  <h4 className="team__item-title">{item.name}</h4>
+                  <p className="team__item-subtitle">{item.position}</p>
+                  <div className="team__mail">
+                     <MailBlack className="team__mail-img" />
+                     <a href={`mailto:${item.email}`} className="team__mail-link">{item.email}</a>
+                  </div>
+                  <div className="team__phone">
+                     <PhoneBlack className="team__phone-img" />
+                     <a href={`tel:${item.phone}`} className="team__phone-link">{item.phone}</a>
+                  </div>
+               </li>
+            ))}
+         </ul>
       </div>
    )
 }

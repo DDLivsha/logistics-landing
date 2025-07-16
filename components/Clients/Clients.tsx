@@ -9,6 +9,7 @@ import 'swiper/css/pagination'
 import Image from 'next/image'
 import { useModalStore } from '@/helpers/zustand'
 import Button from '../common/Button'
+import Link from 'next/link'
 
 
 interface Props {
@@ -27,9 +28,9 @@ const Clients: FC<Props> = ({ imgData, sliderData }) => {
             <ul className="clients__logos-list">
                {imgData.map((item, key) => (
                   <li key={key} className="clients__list-item">
-                     <a href="#" target="_blank" className="clients__list-link">
+                     <Link href="#" target="_blank" className="clients__list-link">
                         <img src={item.img} alt="logo" className="clients__img" />
-                     </a>
+                     </Link>
                   </li>
                ))}
             </ul>
@@ -73,7 +74,6 @@ const Clients: FC<Props> = ({ imgData, sliderData }) => {
                   ))}
                </Swiper>
             </div>
-
          </div>
          <div className="clients__bottom">
             <Button onClick={() => open()}>Become a client</Button>

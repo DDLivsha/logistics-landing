@@ -20,33 +20,27 @@ export default function Home() {
     <>
       <main className="main">
         <Intro />
-
         <section
-          className="main__service service"
+          className="main__service"
           id="service"
         >
           <Services data={services} />
         </section>
-
-        <section className="main__clients clients" id="clients">
+        <section className="main__clients" id="clients">
           <Clients
             imgData={imgData}
             sliderData={sliderData}
           />
         </section>
-
-        <section className="main__benefits benefits" id="benefits">
+        <section className="main__benefits" id="benefits">
           <Benefits data={benefits} />
         </section>
-
-        <section className="main__team team" id="team">
+        <section className="main__team" id="team">
           <Team data={team} />
         </section>
-
         <section className="main__mission mission">
           <Mission />
         </section>
-
         <section className="main__news news" id="news">
           <Blog data={news} />
         </section>

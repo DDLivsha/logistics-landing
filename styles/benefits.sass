@@ -12,56 +12,41 @@
    background-image: linear-gradient(to bottom, #fff 40%, #a5a5a5 40%)
    background-size: 2px 35px
    background-repeat: repeat-y
-   background-position: left 12px top 0px
+   background-position: left 12px top 1px
    position: relative
+   display: flex
+   flex-direction: column
+   gap: 35px
+   
+   &::before,
+   &::after
+      content: ""
+      width: 26px
+      height: 36px
+      background-color: #fff
+   &::before
+      background: url(/way-start.svg) 0 0 / 100% no-repeat
+      position: absolute
+      top: -0
+      left: 0
+      background-color: #fff
+   &::after
+      background: url(/way-end.svg) 0 0 / 100% no-repeat
+      position: absolute
+      bottom: -10px
+      left: 0
+      background-color: #fff
 
-.benefits__list::before,
-.benefits__list::after
-   content: ""
-   width: 26px
-   height: 36px
-   background-color: #fff
+   &-item
+      max-width: 315px
 
-.benefits__list::before
-   background: url(/way-start.svg) 0 0 / 100% no-repeat
-   position: absolute
-   top: -0
-   left: 0
-   background-color: #fff
+   &-title
+      color: #2c2c2c
+      font-family: var(--font-lato)
+      font-size: 21px
+      font-weight: 900
+      margin-bottom: 12px
 
-.benefits__list::after
-   background: url(/way-end.svg) 0 0 / 100% no-repeat
-   position: absolute
-   bottom: -10px
-   left: 0
-   background-color: #fff
-
-.benefits__list-item
-   max-width: 315px
-   margin-bottom: 35px
-   &:last-child
-      margin: 0
-
-.benefits__list-title
-   color: #2c2c2c
-   font-family: var(--font-lato)
-   font-size: 21px
-   font-style: normal
-   font-weight: 900
-   line-height: normal
-   margin-bottom: 12px
-
-.benefits__list-text
-   color: #585858
-   font-weight: 400
-
-// .benefits__img
-//    height: auto
-//    width: 100%
-//    &-box
-//       position: relative
-//       height: auto
-//       width: 100%
-
-.swiper
-   padding-bottom: 20px !important
+   &-text
+      color: #585858
+      font-weight: 400

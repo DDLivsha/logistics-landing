@@ -4,12 +4,13 @@ import IntroForm from './IntroForm'
 
 export default function Intro() {
    return (
-      <section className="main__intro intro" id="intro">
-         <div className="intro__slider" id="IntroSlider">
+
+      <section className="intro" id="intro">
+         <div className="intro__img-box">
             <Image
                src={bg1}
                alt="truck"
-               className="slick__img"
+               className="intro__img"
                width={1300}
                height={600}
                placeholder='blur'
