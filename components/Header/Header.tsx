@@ -4,6 +4,8 @@ import Logo from '@/assets/images/logo.svg'
 import { useModalStore } from '@/helpers/zustand'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { AnimatePresence, motion } from 'motion/react'
+import BurgerButton from './BurgerButton'
 
 const navigation = [
    { name: "Services", id: "service" },
@@ -62,8 +64,50 @@ export default function Header() {
       }
    }
 
+   //================== MOBILE MENU ======================
+   const [isOpen, setIsOpen] = useState(false)
+   const mobileMenuRef = useRef<HTMLUListElement | null>(null)
+   const burgerRef = useRef<HTMLButtonElement | null>(null)
+
+   //================== UNSET SCROLL FOR BODY ======================
+   useEffect(() => {
+      if (isOpen) {
+         document.body.style.overflow = 'hidden'
+      } else {
+         const timeout = setTimeout(() => {
+            document.body.style.overflow = ''
+         }, 300)
+
+         return () => clearTimeout(timeout)
+      }
+   }, [isOpen])
+
+   //================== OUTSIDE CLICK ======================
+   useEffect(() => {
+      const handleOutsideClick = (event: MouseEvent) => {
+         const target = event.target as Node
+         const menuEl = mobileMenuRef.current
+         const burgerEl = burgerRef.current
+
+         if (isOpen && menuEl && !menuEl.contains(target) && burgerEl && !burgerEl.contains(target)) {
+            setIsOpen(false)
+         }
+      }
+
+      document.addEventListener('mousedown', handleOutsideClick)
+
+      return () => {
+         document.removeEventListener('mousedown', handleOutsideClick)
+      }
+   }, [isOpen])
+
    return (
       <header className="header" id="header">
+         <BurgerButton
+            isOpen={isOpen}
+            onClick={() => setIsOpen(!isOpen)}
+            ref={burgerRef}
+         />
          <div className="container">
             <div className="header__inner">
                <Link href="/" className="header__logo">
@@ -103,8 +147,49 @@ export default function Header() {
                      </button>
                   </ul>
                </nav>
-               
             </div>
+            <AnimatePresence mode='wait'>
+               {isOpen &&
+                  <motion.nav
+                     className="header__mobile"
+                     initial={{ opacity: 0 }}
+                     animate={{ opacity: 1 }}
+                     exit={{ opacity: 0 }}
+                  >
+                     <motion.ul
+                        ref={mobileMenuRef}
+                        className="header__mobile-list"
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 100 }}
+                     >
+                        {pathname === '/' && navigation.map((item, index) => (
+                           <li className={`header__mobile-item`} key={index} onClick={() => handleClick(item.id)}>
+                              {item.name}
+                           </li>
+                        ))}
+                        {pathname !== '/' &&
+                           <>
+                              <Link href={'/'}>
+                                 < li className={`header__mobile-item`}>
+                                    Home page
+                                 </li>
+                              </Link>
+                              {pathname === '/news' && <Link href={'/privacy'}>
+                                 < li className={`header__mobile-item`}>
+                                    Privacy policy
+                                 </li>
+                              </Link>}
+                              {pathname === '/privacy' && <Link href={'/news'}>
+                                 < li className={`header__mobile-item`}>
+                                    Our blog
+                                 </li>
+                              </Link>}
+                           </>
+                        }
+                     </motion.ul>
+                  </motion.nav>}
+            </AnimatePresence>
          </div>
       </header >
    )
