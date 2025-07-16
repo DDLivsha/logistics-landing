@@ -1,5 +1,9 @@
+@use "../styles/mixins.sass" as *
+
 .main__clients
    padding: 60px 0
+   @include onPhone
+      padding-top: 0px
 
 .clients__title
    margin-bottom: 55px
@@ -112,6 +116,8 @@
    display: flex
    align-items: center
    gap: 40px
+   @include onPhone
+      margin-top: 30px
 
 .clients__love
    color: #464646
@@ -131,4 +137,3 @@
 
 .swiper
    padding-bottom: 20px !important
-

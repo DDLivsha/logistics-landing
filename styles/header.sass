@@ -7,6 +7,8 @@
    position: fixed
    z-index: 1000
    transition: all 0.3s
+   @include onPhone
+      height: 50px
 
    &__inner
       display: flex
@@ -14,6 +16,8 @@
       justify-content: space-between
       align-items: center
       height: 85px
+      @include onPhone
+         height: 50px
 
    &__nav
       @include onPhone
