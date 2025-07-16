@@ -10,6 +10,7 @@ import Image from 'next/image'
 import { useModalStore } from '@/helpers/zustand'
 import Button from '../common/Button'
 import Link from 'next/link'
+import Title from '../common/Title'
 
 
 interface Props {
@@ -23,7 +24,8 @@ const Clients: FC<Props> = ({ imgData, sliderData }) => {
 
    return (
       <div className="container">
-         <h2 className="clients__title title"><span>Our</span> Clients</h2>
+         {/* <h2 className="clients__title title"><span>Our</span> Clients</h2> */}
+         <Title blueText="Our" blackText="Clients" />
          <div className="clients__inner">
             <ul className="clients__logos-list">
                {imgData.map((item, key) => (

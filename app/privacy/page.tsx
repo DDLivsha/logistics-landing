@@ -1,7 +1,7 @@
 import React from 'react'
 import bg from '@/assets/images/header/privacy.jpg'
 import Image from 'next/image'
-import PrivacyButtonWrapper from './PrivacyButtonWrapper'
+import ButtonWrapper from '@/components/common/ButtonWrapper'
 
 export const metadata = {
    title: 'Privacy Policy',
@@ -41,7 +41,7 @@ export default function Privacy() {
                            passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
                            of text.
                         </p>
-                        <PrivacyButtonWrapper />
+                        <ButtonWrapper href="/" className='mt-[50px]'>Back to home</ButtonWrapper>
                      </div>
                   </div>
                </div>

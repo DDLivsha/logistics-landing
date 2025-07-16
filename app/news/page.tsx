@@ -1,7 +1,7 @@
 import React from 'react'
 import bg from '@/assets/images/header/interesting.jpg'
 import Image from 'next/image'
-import PrivacyButtonWrapper from '../privacy/PrivacyButtonWrapper'
+import ButtonWrapper from '@/components/common/ButtonWrapper'
 import IntroForm from '@/components/Intro/IntroForm'
 import { news } from '@/helpers/localData'
 
@@ -30,7 +30,7 @@ export default function News() {
                            </article>
                         ))}
                      </div>
-                     <PrivacyButtonWrapper />
+                     <ButtonWrapper href="/" className='mt-[50px]'>Back to home</ButtonWrapper>
                   </div>
                   <div className="form !h-fit">
                      <div className="form__head">

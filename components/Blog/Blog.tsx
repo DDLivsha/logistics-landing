@@ -1,7 +1,8 @@
 import { News } from '@/interfaces/news'
 import React, { FC } from 'react'
-import BlogButtonWrapper from './BlogButtonWrapper'
 import Link from 'next/link'
+import Title from '../common/Title'
+import ButtonWrapper from '../common/ButtonWrapper'
 
 interface Props {
    data: News[]
@@ -9,7 +10,7 @@ interface Props {
 const Blog: FC<Props> = ({ data }) => {
    return (
       <div className="container">
-         <h2 className="clients__title title" ><span>Interesting</span> to read</h2>
+         <Title blueText="Interesting" blackText="to read" />
          <div className="news__list">
             {data.map((item, key) => (
                <article key={key} className="news__list-item">
@@ -21,7 +22,7 @@ const Blog: FC<Props> = ({ data }) => {
                </article>
             ))}
          </div>
-         <BlogButtonWrapper />
+         <ButtonWrapper href="/news">Visit blog</ButtonWrapper>
       </div>
    )
 }

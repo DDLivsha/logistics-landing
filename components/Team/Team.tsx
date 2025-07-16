@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { FC } from 'react'
 import MailBlack from '@/assets/images/icons/mail-black.svg'
 import PhoneBlack from '@/assets/images/icons/phone-black.svg'
+import Title from '../common/Title'
 
 interface Props {
    data: TeamMember[]
@@ -10,7 +11,7 @@ interface Props {
 const Team: FC<Props> = ({ data }) => {
    return (
       <div className="container">
-         <h2 className="team__title title" ><span>Our</span> Team</h2>
+         <Title blueText="Our" blackText="Team" />
          <ul className="team__content-list">
             {data.map((item, key) => (
                <li key={key} className="team__content-item">

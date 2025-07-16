@@ -1,3 +1,4 @@
+@use "./mixins.sass" as *
 body
    font-family: var(--font-pt-sans)
    font-size: 15px
@@ -30,9 +31,10 @@ input
    color: #2c2c2c
    font-family: var(--font-lato)
    font-size: 45px
-   font-style: normal
    font-weight: 900
-   line-height: normal
+   margin-bottom: 50px
+   @include onTablet
+      margin-bottom: 25px
    & span
       color: #004af2
 
