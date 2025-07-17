@@ -31,7 +31,7 @@ const IntroForm: FC = () => {
             <input
                className="form__input name__input"
                placeholder="Your name"
-               {...register('name', { required: 'Name is required', maxLength: { value: 20, message: 'Max 20 symbols' }, minLength: { value: 2, message: 'Min 2 symbols' }, pattern: { value: /^[a-zA-Zа-яА-Я]+$/, message: 'Only letters' },})}
+               {...register('name', { required: 'Name is required', maxLength: { value: 20, message: 'Max 20 symbols' }, minLength: { value: 2, message: 'Min 2 symbols' }, pattern: { value: /^(?!.* {2})[a-zA-Zа-яА-ЯіїєґІЇЄҐ'-]+(?: [a-zA-Zа-яА-ЯіїєґІЇЄҐ'-]+)*$/, message: 'Only letters' },})}
             />
             {errors.name && <span className="form__error">{errors.name.message}</span>}
          </label>

@@ -37,11 +37,14 @@ export default function Header() {
             }
          })
       }, options)
-      navigation.forEach(item => {
-         const el = document.getElementById(item.id)
-         if (el) observer.observe(el)
-         sectionRefs.current[item.id] = el
-      })
+
+      if (pathname === '/') {
+         navigation.forEach(item => {
+            const el = document.getElementById(item.id);
+            if (el) observer.observe(el);
+            sectionRefs.current[item.id] = el;
+         });
+      }
 
       const handleScroll = () => {
          if (window.scrollY < 50) {
@@ -49,13 +52,19 @@ export default function Header() {
          }
       }
       window.addEventListener('scroll', handleScroll)
+      // return () => {
+      //    navigation.forEach(item => {
+      //       const el = sectionRefs.current[item.id]
+      //       if (el) observer.unobserve(el)
+      //    })
+      // }
+
       return () => {
-         navigation.forEach(item => {
-            const el = sectionRefs.current[item.id]
-            if (el) observer.unobserve(el)
-         })
-      }
-   }, [])
+         observer.disconnect();
+         window.removeEventListener('scroll', handleScroll);
+      };
+
+   }, [pathname])
 
    const handleClick = (id: string) => {
       const section = document.getElementById(id)
