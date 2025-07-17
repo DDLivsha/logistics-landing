@@ -40,7 +40,7 @@ const IntroForm: FC = () => {
             <input
                className="form__input phone__input"
                placeholder="Your phone"
-               {...register('phone', { required: 'Phone is required', maxLength: { value: 20, message: 'Max 20 symbols' }, minLength: { value: 8, message: 'Min 8 symbols' }, pattern: { value: /^[0-9]+$/, message: 'Only numbers' },})}
+               {...register('phone', { required: 'Phone is required', maxLength: { value: 20, message: 'Max 20 symbols' }, minLength: { value: 8, message: 'Min 8 symbols' }, pattern: { value: /^(\+)?[0-9]+$/, message: 'Only numbers' },})}
             />
             {errors.phone && <span className="form__error">{errors.phone.message}</span>}
          </label>

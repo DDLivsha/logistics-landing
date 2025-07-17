@@ -11,6 +11,7 @@ import { useModalStore } from '@/helpers/zustand'
 import Button from '../common/Button'
 import Link from 'next/link'
 import Title from '../common/Title'
+import { motion } from 'motion/react'
 
 
 interface Props {
@@ -24,16 +25,22 @@ const Clients: FC<Props> = ({ imgData, sliderData }) => {
 
    return (
       <div className="container">
-         {/* <h2 className="clients__title title"><span>Our</span> Clients</h2> */}
          <Title blueText="Our" blackText="Clients" />
          <div className="clients__inner">
             <ul className="clients__logos-list">
                {imgData.map((item, key) => (
-                  <li key={key} className="clients__list-item">
+                  <motion.li
+                     key={key}
+                     className="clients__list-item"
+                     initial={{ opacity: 0, y: -100 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true }}
+                     transition={{ duration: 0.2, delay: key * 0.2 }}
+                  >
                      <Link href="#" target="_blank" className="clients__list-link">
                         <img src={item.img} alt="logo" className="clients__img" />
                      </Link>
-                  </li>
+                  </motion.li>
                ))}
             </ul>
 

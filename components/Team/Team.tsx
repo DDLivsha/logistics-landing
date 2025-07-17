@@ -4,6 +4,7 @@ import React, { FC } from 'react'
 import MailBlack from '@/assets/images/icons/mail-black.svg'
 import PhoneBlack from '@/assets/images/icons/phone-black.svg'
 import Title from '../common/Title'
+import * as motion from 'motion/react-client'
 
 interface Props {
    data: TeamMember[]
@@ -14,7 +15,14 @@ const Team: FC<Props> = ({ data }) => {
          <Title blueText="Our" blackText="Team" />
          <ul className="team__content-list">
             {data.map((item, key) => (
-               <li key={key} className="team__content-item">
+               <motion.li
+                  key={key}
+                  className="team__content-item"
+                  initial={{ opacity: 0, x:-100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: key * 0.2 }}
+               >
                   <div className="team__img-box">
                      <Image width={370} height={195} src={item.image} alt="John" />
                   </div>
@@ -28,7 +36,7 @@ const Team: FC<Props> = ({ data }) => {
                      <PhoneBlack className="team__phone-img" />
                      <a href={`tel:${item.phone}`} className="team__phone-link">{item.phone}</a>
                   </div>
-               </li>
+               </motion.li>
             ))}
          </ul>
       </div>
