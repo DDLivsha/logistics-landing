@@ -15,11 +15,11 @@ export default function News() {
    return (
       <main>
          <Image src={bg} alt="truck" className="header__img" width={1300} height={350} placeholder='blur' quality={90} />
-         <section className="main__blog max-[770px]:!pb-0">
+         <section className="main__blog max-phone:!pb-0">
             <div className="container">
-               <div className="flex justify-between gap-4 max-[770px]:flex-col max-[770px]:gap-12 max-[770px]:items-center">
+               <div className="flex justify-between gap-4 max-phone:flex-col max-phone:gap-12 max-phone:items-center">
                   <div className="blog__content">
-                     <div className="flex flex-col gap-[45px] max-w-[600px] max-[770px]:max-w-full max-[770px]:gap-3">
+                     <div className="flex flex-col gap-[45px] max-w-[600px] max-phone:max-w-full max-phone:gap-3">
                         <Title blueText="Interesting" blackText="to read" />
                         {news.map((item, key) => (
                            <article key={key} className="news__list-item">
@@ -31,7 +31,7 @@ export default function News() {
                            </article>
                         ))}
                      </div>
-                     <ButtonWrapper href="/" className='mt-[50px] max-[770px]:mt-[30px]'>Back to home</ButtonWrapper>
+                     <ButtonWrapper href="/" className='mt-[50px] max-phone:mt-[30px]'>Back to home</ButtonWrapper>
                   </div>
                   <div className="form !h-fit">
                      <div className="form__head">

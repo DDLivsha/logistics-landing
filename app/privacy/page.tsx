@@ -42,7 +42,7 @@ export default function Privacy() {
                            passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
                            of text.
                         </p>
-                        <ButtonWrapper href="/" className='mt-[50px] max-[770px]:mt-[30px] max-[770px]:mb-[30px]'>Back to home</ButtonWrapper>
+                        <ButtonWrapper href="/" className='mt-[50px] max-phone:mt-[30px]'>Back to home</ButtonWrapper>
                      </div>
                   </div>
                </div>
