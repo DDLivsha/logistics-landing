@@ -2,6 +2,7 @@ import React from 'react'
 import bg from '@/assets/images/header/privacy.jpg'
 import Image from 'next/image'
 import ButtonWrapper from '@/components/common/ButtonWrapper'
+import Title from '@/components/common/Title'
 
 export const metadata = {
    title: 'Privacy Policy',
@@ -17,7 +18,7 @@ export default function Privacy() {
                <div className="container">
                   <div className="privacy__inner">
                      <div className="max-w-[800px]">
-                        <h2 className="clients__title title"><span>Privacy</span> Policy</h2>
+                        <Title blueText="Privacy" blackText="Policy" />
                         <p className="privacy__text">It is a long established fact that a reader will be distracted by the
                            readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
                            has a more-or-less normal distribution of letters, as opposed to using 'Content here, content
@@ -41,7 +42,7 @@ export default function Privacy() {
                            passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
                            of text.
                         </p>
-                        <ButtonWrapper href="/" className='mt-[50px]'>Back to home</ButtonWrapper>
+                        <ButtonWrapper href="/" className='mt-[50px] max-[770px]:mt-[30px] max-[770px]:mb-[30px]'>Back to home</ButtonWrapper>
                      </div>
                   </div>
                </div>

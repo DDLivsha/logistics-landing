@@ -11,7 +11,6 @@ import Button from '../common/Button'
 import { IForm } from '../Intro/IntroForm'
 import { AnimatePresence, motion } from 'motion/react'
 
-
 const ContactFormModal: FC = () => {
 
    //================ FORM FUNCTIONS ================
@@ -39,8 +38,10 @@ const ContactFormModal: FC = () => {
          document.body.style.overflow = 'hidden'
          document.body.style.paddingRight = '16px'
          if (headerInner instanceof HTMLElement) headerInner.style.paddingRight = '8px'
-
-      } else {
+      } else if ((isModalOpen || isSuccessModalOpen) && isTablet) {
+         document.body.style.overflow = 'hidden'
+      }
+      else {
          const timeout = setTimeout(() => {
             document.body.style.overflow = ''
             document.body.style.paddingRight = ''

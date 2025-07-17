@@ -33,8 +33,11 @@ input
    font-size: 45px
    font-weight: 900
    margin-bottom: 50px
+   
    @include onTablet
       margin-bottom: 25px
+   @include onPhone
+      font-size: 35px
    & span
       color: #004af2
 
@@ -42,3 +45,5 @@ input
    width: 100%
    height: auto
    margin-bottom: 60px
+   @include onPhone
+      margin-bottom: 30px

@@ -4,7 +4,7 @@ import "./tailwind.css";
 import { Lato, PT_Sans } from 'next/font/google'
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import ContactFormModal from "@/components/modals/ContactFormModal";
+import ContactFormModal from "@/components/modal/ContactFormModal";
 
 export const metadata: Metadata = {
   title: "Logistic landing",

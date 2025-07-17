@@ -1,13 +1,10 @@
 module.exports = {
-   content: [
-      "./pages/**/*.{js,ts,jsx,tsx}",
-      "./components/**/*.{js,ts,jsx,tsx}",
-   ],
+   content: [],
    theme: {
       extend: {},
       screens: {
-         'tablet': { 'max': '990px' },
-         'phone': { 'max': '770px' },
+         phone: { max: '770px' },
+         tablet: { max: '990px' },
       },
    },
    plugins: [],

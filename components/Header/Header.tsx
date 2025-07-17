@@ -164,23 +164,26 @@ export default function Header() {
                         exit={{ opacity: 0, x: 100 }}
                      >
                         {pathname === '/' && navigation.map((item, index) => (
-                           <li className={`header__mobile-item`} key={index} onClick={() => handleClick(item.id)}>
+                           <li className={`header__mobile-item`} key={index} onClick={() => {
+                              handleClick(item.id)
+                              setIsOpen(false)
+                           }}>
                               {item.name}
                            </li>
                         ))}
                         {pathname !== '/' &&
                            <>
-                              <Link href={'/'}>
+                              <Link onClick={() => setIsOpen(false)} href={'/'}>
                                  < li className={`header__mobile-item`}>
                                     Home page
                                  </li>
                               </Link>
-                              {pathname === '/news' && <Link href={'/privacy'}>
+                              {pathname === '/news' && <Link onClick={() => setIsOpen(false)} href={'/privacy'}>
                                  < li className={`header__mobile-item`}>
                                     Privacy policy
                                  </li>
                               </Link>}
-                              {pathname === '/privacy' && <Link href={'/news'}>
+                              {pathname === '/privacy' && <Link onClick={() => setIsOpen(false)} href={'/news'}>
                                  < li className={`header__mobile-item`}>
                                     Our blog
                                  </li>
