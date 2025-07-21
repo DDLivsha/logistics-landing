@@ -8,13 +8,14 @@ import Success from '@/assets/images/icons/thanks.svg'
 import { useModalStore } from '@/helpers/zustand'
 import { useForm } from 'react-hook-form'
 import Button from '../common/Button'
-import { IForm } from '../Intro/IntroForm'
 import { AnimatePresence, motion } from 'motion/react'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { IntroFormSchema, IForm } from '@/helpers/zod'
 
 const ContactFormModal: FC = () => {
 
    //================ FORM FUNCTIONS ================
-   const { register, handleSubmit, formState: { errors }, reset } = useForm<IForm>({ mode: 'onBlur' })
+   const { register, handleSubmit, formState: { errors }, reset } = useForm<IForm>({ mode: 'onChange', resolver: zodResolver(IntroFormSchema) })
 
    const onSubmit = (data: IForm) => {
       console.log(data)
@@ -112,7 +113,7 @@ const ContactFormModal: FC = () => {
                            <input
                               className="modal__input name__input"
                               placeholder="Your name"
-                              {...register('name', { required: 'Name is required', maxLength: { value: 20, message: 'Max 20 symbols' }, minLength: { value: 2, message: 'Min 2 symbols' }, pattern: { value: /^(?!.* {2})[a-zA-Zа-яА-ЯіїєґІЇЄҐ'-]+(?: [a-zA-Zа-яА-ЯіїєґІЇЄҐ'-]+)*$/, message: 'Only letters' }, })}
+                              {...register('name')}
                            />
                            {errors.name && <span className="modal__error">{errors.name.message}</span>}
                         </label>
@@ -121,7 +122,7 @@ const ContactFormModal: FC = () => {
                            <input
                               className="modal__input phone__input"
                               placeholder="Your phone"
-                              {...register('phone', { required: 'Phone is required', maxLength: { value: 20, message: 'Max 20 symbols' }, minLength: { value: 8, message: 'Min 8 symbols' }, pattern: { value: /^[0-9]+$/, message: 'Only numbers' }, })}
+                              {...register('phone')}
                            />
                            {errors.phone && <span className="modal__error">{errors.phone.message}</span>}
                         </label>
@@ -130,7 +131,7 @@ const ContactFormModal: FC = () => {
                            <input
                               className="modal__input mail__input"
                               placeholder="Your e-mail"
-                              {...register('email', { required: 'Email is required', maxLength: { value: 30, message: 'Max 30 symbols' }, pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email' }, })}
+                              {...register('email')}
                            />
                            {errors.email && <span className="modal__error">{errors.email.message}</span>}
                         </label>
