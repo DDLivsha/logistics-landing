@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Logistic Landing
 
-## Getting Started
+A modern and responsive landing page for a logistics company, built using Next.js 15, Tailwind CSS, TypeScript, and more. The goal of the project is to present logistics services in a clean, professional, and user-friendly format to attract potential clients.
 
-First, run the development server:
+This is a complete rework of a previous version that was built with plain HTML/CSS — now rebuilt using a modern stack and component-based architecture.
+
+## 🚀 Live Demo
+
+[View the site on Vercel](https://logistic-landing.vercel.app)
+
+## 🧠 Tech Stack
+
+- [Next.js 15 (App Router)](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [Framer Motion](https://www.framer.com/motion/) (used for animations)
+
+## ✨ Features
+
+- Fully responsive design
+- Modular component-based architecture
+- Clean and minimalistic UI
+- Landing page with:
+  - Hero section
+  - Services section (CSS Grid layout)
+  - Contact form
+  - Modal with form
+  - Success modal
+  - Simple Blog and Privacy pages
+
+## 📂 Folder Structure Highlights
+
+/app - Next.js App Router structure
+/components - Reusable UI components
+/styles - Global SASS styling
+/helpers - zustand store and local data
+/interfaces - TypeScript interfaces
+/assets - Assets (images, fonts, etc.)
+
+## 🛠️ Getting Started
+
+Clone the repo and install dependencies:
 
 ```bash
+git clone https://github.com/DaniiilDon/logistic-landing.git
+cd logistic-landing
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -57,6 +57,7 @@ const ContactFormModal: FC = () => {
    const handleCloseModal = () => {
       close()
       closeSuccessModal()
+      reset()
    }
 
    useEffect(() => {
@@ -69,10 +70,12 @@ const ContactFormModal: FC = () => {
 
          if (isModalOpen && contactFormEl && !contactFormEl.contains(target)) {
             close()
+            reset()
          }
 
          if (isSuccessModalOpen && successModalEl && !successModalEl.contains(target)) {
             closeSuccessModal()
+            reset()
          }
       }
 
@@ -109,7 +112,7 @@ const ContactFormModal: FC = () => {
                            <input
                               className="modal__input name__input"
                               placeholder="Your name"
-                              {...register('name', { required: 'Name is required', maxLength: { value: 20, message: 'Max 20 symbols' }, minLength: { value: 2, message: 'Min 2 symbols' }, pattern: { value: /^[a-zA-Zа-яА-Я]+$/, message: 'Only letters' }, })}
+                              {...register('name', { required: 'Name is required', maxLength: { value: 20, message: 'Max 20 symbols' }, minLength: { value: 2, message: 'Min 2 symbols' }, pattern: { value: /^(?!.* {2})[a-zA-Zа-яА-ЯіїєґІЇЄҐ'-]+(?: [a-zA-Zа-яА-ЯіїєґІЇЄҐ'-]+)*$/, message: 'Only letters' }, })}
                            />
                            {errors.name && <span className="modal__error">{errors.name.message}</span>}
                         </label>
